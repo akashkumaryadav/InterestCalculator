@@ -11,5 +11,7 @@ __#Way to proceed__
 
 __*Don't forget to Create new branch and then make a pull request I'll mentions your contributions if the improvements are proper*__
 
-
-
+__#HeRe are the GLIMPS for YOU__
+![image1](https://github.com/akashkumaryadav/InterestCalculator/blob/master/Images/1.PNG)
+![image1](https://github.com/akashkumaryadav/InterestCalculator/blob/master/Images/2.PNG)
+![image1](https://github.com/akashkumaryadav/InterestCalculator/blob/master/Images/3.PNG)

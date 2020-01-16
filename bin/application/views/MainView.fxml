@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="404.0" prefWidth="784.0" stylesheets="@../stylesheets/MainView.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainViewController">
+   <children>
+      <BorderPane layoutX="141.0" layoutY="90.0" prefHeight="338.0" prefWidth="779.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="FixedDeposit">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <HBox layoutX="486.0" layoutY="95.0" prefHeight="328.0" prefWidth="784.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane prefHeight="328.0" prefWidth="586.0" stylesheets="@../stylesheets/MainView.css">
+                                       <children>
+                                          <VBox layoutX="50.0" layoutY="32.0" prefHeight="199.0" prefWidth="238.0">
+                                             <children>
+                                                <JFXTextField fx:id="amount" alignment="CENTER" focusColor="#40a851" labelFloat="true" prefHeight="26.0" prefWidth="238.0" promptText="Enter Amount" unFocusColor="#1e1e1f">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextField>
+                                                <JFXTextField fx:id="age" alignment="CENTER" focusColor="#40a851" labelFloat="true" prefHeight="26.0" prefWidth="238.0" promptText="Enter Age">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextField>
+                                                <JFXTextField fx:id="country" alignment="CENTER" focusColor="#40a851" labelFloat="true" prefHeight="26.0" prefWidth="238.0" promptText="Enter Country">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextField>
+                                                <JFXTextField fx:id="maturityPeriod" alignment="CENTER" focusColor="#40a851" labelFloat="true" prefHeight="26.0" prefWidth="238.0" promptText="Enter Maturity Period In Days">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextField>
+                                             </children>
+                                          </VBox>
+                                          <JFXButton layoutX="102.0" layoutY="251.0" onAction="#caculateFD" prefHeight="40.0" prefWidth="148.0" styleClass="caculate" text="Calculate" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="328.0" prefWidth="692.0">
+                                       <children>
+                                          <HBox layoutX="70.0" layoutY="75.0" prefHeight="195.0" prefWidth="342.0">
+                                             <children>
+                                                <ListView fx:id="mp" prefHeight="160.0" prefWidth="112.0" styleClass="table-header" stylesheets="@../stylesheets/MainView.css" />
+                                                <ListView fx:id="gci" prefHeight="159.0" prefWidth="115.0" />
+                                                <ListView fx:id="sci" prefHeight="160.0" prefWidth="115.0" />
+                                             </children>
+                                          </HBox>
+                                          <Label alignment="CENTER" layoutX="70.0" layoutY="56.0" prefHeight="18.0" prefWidth="113.0" text="Maturity Period">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
+                                          <Label alignment="CENTER" layoutX="184.0" layoutY="56.0" prefHeight="18.0" prefWidth="113.0" text="General Citizen">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
+                                          <Label alignment="CENTER" layoutX="298.0" layoutY="56.0" prefHeight="18.0" prefWidth="113.0" text="Senior Citizen">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
+                                          <Label fx:id="finalAmount" alignment="CENTER" layoutX="98.0" layoutY="-1.0" prefHeight="50.0" prefWidth="278.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="RecuringDepoit">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <HBox layoutX="486.0" layoutY="95.0" prefHeight="328.0" prefWidth="784.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane prefHeight="328.0" prefWidth="586.0" stylesheets="@../stylesheets/MainView.css">
+                                       <children>
+                                          <VBox layoutX="50.0" layoutY="34.0">
+                                             <children>
+                                                <JFXTextField fx:id="amountRD" alignment="CENTER" focusColor="#40a851" labelFloat="true" prefHeight="26.0" prefWidth="238.0" promptText="Enter Amount" stylesheets="@../stylesheets/MainView.css" unFocusColor="#1e1e1f">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextField>
+                                                <JFXTextField fx:id="ageRD" alignment="CENTER" focusColor="#40a851" labelFloat="true" prefHeight="26.0" prefWidth="238.0" promptText="Enter Age">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextField>
+                                                <JFXTextField fx:id="countryRD" alignment="CENTER" focusColor="#40a851" labelFloat="true" prefHeight="26.0" prefWidth="238.0" promptText="Enter Country">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextField>
+                                                <JFXTextField fx:id="maturityPeriodRD" alignment="CENTER" focusColor="#40a851" labelFloat="true" prefHeight="26.0" prefWidth="238.0" promptText="Enter Maturity Period In Months">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextField>
+                                             </children>
+                                          </VBox>
+                                          <JFXButton layoutX="102.0" layoutY="251.0" onAction="#calculateRD" prefHeight="40.0" prefWidth="140.0" styleClass="caculate" text="Calculate" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="328.0" prefWidth="692.0">
+                                       <children>
+                                          <HBox layoutX="70.0" layoutY="74.0" prefHeight="192.0" prefWidth="342.0">
+                                             <children>
+                                                <ListView fx:id="mpRD" prefHeight="160.0" prefWidth="112.0" styleClass="table-header" stylesheets="@../stylesheets/MainView.css" />
+                                                <ListView fx:id="gciRD" prefHeight="159.0" prefWidth="115.0" />
+                                                <ListView fx:id="sciRD" prefHeight="160.0" prefWidth="115.0" />
+                                             </children>
+                                          </HBox>
+                                          <Label alignment="CENTER" layoutX="70.0" layoutY="55.0" prefHeight="18.0" prefWidth="113.0" text="Maturity Period">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
+                                          <Label alignment="CENTER" layoutX="184.0" layoutY="55.0" prefHeight="18.0" prefWidth="113.0" text="General Citizen">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
+                                          <Label alignment="CENTER" layoutX="298.0" layoutY="55.0" prefHeight="18.0" prefWidth="113.0" text="Senior Citizen">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
+                                          <Label fx:id="finalAmountRD" alignment="CENTER" layoutX="107.0" prefHeight="50.0" prefWidth="230.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+         <top>
+            <HBox alignment="CENTER" prefHeight="45.0" prefWidth="779.0" styleClass="round-text-field" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox fx:id="calcIcon" alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="57.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="header" text="Interest Calculator" wrappingWidth="277.87535858154297" />
+               </children>
+            </HBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

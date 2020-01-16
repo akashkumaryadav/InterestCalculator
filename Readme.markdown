@@ -15,3 +15,6 @@ __#HeRe are the GLIMPS for YOU__
 ![image1](https://github.com/akashkumaryadav/InterestCalculator/blob/master/Images/1.PNG)
 ![image1](https://github.com/akashkumaryadav/InterestCalculator/blob/master/Images/2.PNG)
 ![image1](https://github.com/akashkumaryadav/InterestCalculator/blob/master/Images/3.PNG)
+
+
+__I am starting to contribute__JayeshMantri
